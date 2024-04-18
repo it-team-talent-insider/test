@@ -40,6 +40,11 @@ app.post('/login', (req, res) => {
     res.status(200).json({ message: '✅ Login successful', username, email: users[username].email });
 });
 
+app.get('/test', (req, res) => {
+    res.send('Ini adalah respons dari server untuk endpoint /test');
+  });
+  
+
 // Start server
 app.listen(port, () => {
     console.log(`🚀 Server started on port http://localhost:${port}`);
